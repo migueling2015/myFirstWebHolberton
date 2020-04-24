@@ -110,11 +110,15 @@ header{
     flex: auto; 
 }
 
+/* -------------------------------------------ARTICLE CONF */
 article{
     flex: 2;
     overflow-y: auto;
 }
 
+article * {
+    padding: 0px;
+}
 
 .grouping-games{
     display: flex;
@@ -153,7 +157,205 @@ article{
     width: auto;
     height: auto;
     margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.game-card-1 {
+    position: relative;
+    background: white;
+    overflow: hidden;
+}
+
+.game-card-1:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.6;
+    background-image: url('../assets/cbandicoot_00.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+}
+
+.game-card-1 h3{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 1;
+}
+
+.game-card-1 p{
+    position: absolute;
+    left: 0;
+    top: 30px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 1;
+}
+
+/* .game-card-1{
+    align-self: flex-end;   
+    background-image: url('../assets/cbandicoot_00.jpg');
+    background-size: cover;
+} */
+
+.game-card-2 {
+    position: relative;
+    background: white;
+    overflow: hidden;
+}
+
+.game-card-2:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.6;
+    background-image: url('../assets/hellblade_00.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+}
+
+.game-card-2 h3{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 1;
+}
+
+.game-card-2 p{
+    position: absolute;
+    left: 0;
+    top: 30px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 1;
+}
+
+/* .game-card-2{
+    align-self: flex-end;   
+    background-image: url('../assets/hellblade_00.jpg');
+    background-size: cover;
+} */
+
+.game-card-3 {
+    position: relative;
+    background: white;
+    overflow: hidden;
+}
+
+.game-card-3:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.6;
+    background-image: url('../assets/cuphead_00.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+}
+
+.game-card-3 h3{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 1;
+}
+
+.game-card-3 p{
+    position: absolute;
+    left: 0;
+    top: 30px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 1;
+}
+
+/* .game-card-3{
+    align-self: flex-end;   
+    background-image: url('../assets/cuphead_00.jpg');
+    background-size: cover;
+} */
+
+.game-card-4 {
+    position: relative;
+    background: white;
+    overflow: hidden;
+}
+
+.game-card-4:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.6;
+    background-image: url('../assets/spiderman_00.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+}
+
+.game-card-4 h3{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 1;
+}
+
+.game-card-4 p{
+    position: absolute;
+    left: 0;
+    top: 30px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 1;
+}
+
+/* .game-card-4{
+    align-self: flex-end;   
+    background-image: url('../assets/spiderman_00.jpg');
+    background-size: cover;
+} */
+
+
+/* -------------------------------------------ASIDE CONF */
 
 aside{
     display: flex;
