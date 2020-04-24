@@ -1,0 +1,172 @@
+
+/* -------------------------------------------GENERAL CONF */
+
+:root{
+
+    --font-pangolin:'Pangolin', cursive;
+    --font-roboto:'Roboto', sans-serif;
+  
+    --light-dark-color: #96bbbb;
+    --middle-dark-color: #618985;
+    --dark-dark-color: #414535;
+  
+    --back-color-general: #f2e3bc;
+    --brown-dark: #c19875;
+  
+    --white-color: #ffffff;
+  
+    /*------ Colores */
+    --green-color: #7ACC2D;
+   
+    /*------ Tipografía */
+    --normal:12px;
+    /*------ Espaciado */
+    --space:10px;
+    --space-2:20px;
+  }
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: var(--font-pangolin);
+    color: var(--dark-dark-color);
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+* a:hover{
+    color: var(--white-color);
+}
+
+/* -------------------------------------------HEADER CONF */
+
+.head{
+    background-color: var(--middle-dark-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header{
+    padding: 0px;
+    margin: 0px;
+    height: auto;
+    height:155px;
+}
+
+.head h1{
+    align-self:center;
+    font-size:80px;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 20px; 
+    margin-right: 20px; 
+}
+
+.head a{
+    font-size: 25px;
+    font-style: bold;
+}
+
+.head .navigation {
+    align-self:center;
+    list-style: none;
+    margin: 0; 
+}
+
+.navigation ul{
+    margin: 0px;
+    padding: 0px;
+    margin-left: 17.5px;
+    margin-right: 17.5px;
+}
+
+.navigation li {
+    margin: 0px;
+    padding: 0px;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+}
+
+/* -------------------------------------------MAIN CONF */
+
+.main{
+    max-height: calc(100% - 185px);
+    min-height: 600px;
+    height: auto;
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    flex: auto; 
+}
+
+article{
+    background-color: var(--back-color-general  );
+    flex: 2;
+    overflow-y: auto;
+}
+
+
+.grouping-games{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.grouping-games *{
+    padding: 0px;
+    margin: 0px;   
+}
+
+.group-games{
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    width: 100%;
+    height: 50%;
+}
+
+.game-card{
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px 2px var(--brown-dark);
+    flex: 1;
+    width: 50%;
+    height: 100%;
+    max-width: 50%;
+    max-height: 100%;
+    min-width: 30%;
+    min-height: 90%;
+    width: auto;
+    height: auto;
+    margin: 10px;
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    background-color: yellow;
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* -------------------------------------------FOOTER CONF */
+
+.foot{
+    background-color: cyan;
+    height: 30px;
+}
+
