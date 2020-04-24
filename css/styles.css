@@ -23,6 +23,8 @@
     /*------ Espaciado */
     --space:10px;
     --space-2:20px;
+
+    --opacity-back-image:0.5;
   }
 
 *{
@@ -31,9 +33,11 @@
     font-family: var(--font-pangolin);
     color: var(--dark-dark-color);
 }
-
+html{
+    height: 100%;
+}
 body{
-    width: 100%;
+    min-width: 100%;
     height: 100%;
     padding: 0px;
     margin: 0px;
@@ -100,7 +104,7 @@ header{
 /* -------------------------------------------MAIN CONF */
 
 .main{
-    background-color: var(--back-color-general  );
+    background-color: var(--back-color-general);
     max-height: calc(100% - 185px);
     min-height: 600px;
     height: auto;
@@ -177,7 +181,7 @@ article * {
     width: 100%;
     height: 100%;
     z-index: 1;
-    opacity: 0.6;
+    opacity: var(--opacity-back-image);
     background-image: url('../assets/cbandicoot_00.jpg');
     background-repeat: no-repeat;
     background-position: 50% 0;
@@ -225,7 +229,7 @@ article * {
     width: 100%;
     height: 100%;
     z-index: 1;
-    opacity: 0.6;
+    opacity: var(--opacity-back-image);
     background-image: url('../assets/hellblade_00.jpg');
     background-repeat: no-repeat;
     background-position: 50% 0;
@@ -273,7 +277,7 @@ article * {
     width: 100%;
     height: 100%;
     z-index: 1;
-    opacity: 0.6;
+    opacity: var(--opacity-back-image);
     background-image: url('../assets/cuphead_00.jpg');
     background-repeat: no-repeat;
     background-position: 50% 0;
@@ -321,7 +325,7 @@ article * {
     width: 100%;
     height: 100%;
     z-index: 1;
-    opacity: 0.6;
+    opacity: var(--opacity-back-image);
     background-image: url('../assets/spiderman_00.jpg');
     background-repeat: no-repeat;
     background-position: 50% 0;
@@ -353,6 +357,10 @@ article * {
     background-image: url('../assets/spiderman_00.jpg');
     background-size: cover;
 } */
+
+.game-card:hover{
+    box-shadow: 4px 4px 4px 4px var(--dark-dark-color);
+}
 
 
 /* -------------------------------------------ASIDE CONF */
@@ -394,7 +402,16 @@ aside{
 /* -------------------------------------------FOOTER CONF */
 
 .foot{
-    background-color: cyan;
+    background-color: var(--middle-dark-color);
     height: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+iframe{
+    margin: 0px;
+    padding: 0px;
 }
 
