@@ -25,6 +25,13 @@
     --space-2:20px;
 
     --opacity-back-image:0.5;
+    --game-card-p-left: 20px;
+    --game-card-p-top: 40px;
+    --game-card-h3-left: 10px;
+    --game-card-h3-top: 5px;
+
+
+
   }
 
 *{
@@ -105,7 +112,7 @@ header{
 
 .main{
     background-color: var(--back-color-general);
-    max-height: calc(100% - 185px);
+    max-height: 800px;
     min-height: 600px;
     height: auto;
     /* background-color: blue; */
@@ -118,10 +125,116 @@ header{
 article{
     flex: 2;
     overflow-y: auto;
+    display: flex;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
 }
 
 article * {
     padding: 0px;
+    margin: 0px;
+}
+
+.game-container{
+    display: flex;
+    flex-direction: column;
+    flex: auto; 
+    height: 100%;
+}
+
+.left{
+    flex: 1;
+}
+
+.center{
+    flex: 3;
+}
+
+.right{
+    flex: 1;
+}
+
+.container-image-principal{
+    align-items: center;
+    height: calc(100% - 185px);
+    /* padding: 0px;
+    margin: 0px; */
+}
+
+.game-description p{
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+.consoles{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.console{
+    height: 80px;
+    width: 120px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.console img{
+    height: 100%;
+}
+
+
+.character-zone{
+    display: flex;
+    flex:column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.char{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex:row;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.char-img{
+    height: 265px;
+    margin: 5px;
+    padding: 0px;
+    flex: 1;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px 1px var(--brown-dark);
+    align-self: center;
+}
+
+.char-img img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+
+
+
+
+.game-container h3{
+    padding: 0px;
+    margin-top: 20px;
+}
+
+.game-youtube, .game-spotify{
+    margin-top: 10px;
 }
 
 .grouping-games{
@@ -192,27 +305,11 @@ article * {
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
+    left: var(--game-card-h3-left);
+    top: var(--game-card-h3-top);
     z-index: 2;
     opacity: 1;
 }
-
-.game-card-1 p{
-    position: absolute;
-    left: 0;
-    top: 30px;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    opacity: 1;
-}
-
-/* .game-card-1{
-    align-self: flex-end;   
-    background-image: url('../assets/cbandicoot_00.jpg');
-    background-size: cover;
-} */
 
 .game-card-2 {
     position: relative;
@@ -240,27 +337,11 @@ article * {
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
+    left: var(--game-card-h3-left);
+    top: var(--game-card-h3-top);
     z-index: 2;
     opacity: 1;
 }
-
-.game-card-2 p{
-    position: absolute;
-    left: 0;
-    top: 30px;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    opacity: 1;
-}
-
-/* .game-card-2{
-    align-self: flex-end;   
-    background-image: url('../assets/hellblade_00.jpg');
-    background-size: cover;
-} */
 
 .game-card-3 {
     position: relative;
@@ -286,29 +367,13 @@ article * {
 
 .game-card-3 h3{
     position: absolute;
-    left: 0;
-    top: 0;
+    left: var(--game-card-h3-left);
+    top: var(--game-card-h3-top);
     width: 100%;
     height: 100%;
     z-index: 2;
     opacity: 1;
 }
-
-.game-card-3 p{
-    position: absolute;
-    left: 0;
-    top: 30px;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    opacity: 1;
-}
-
-/* .game-card-3{
-    align-self: flex-end;   
-    background-image: url('../assets/cuphead_00.jpg');
-    background-size: cover;
-} */
 
 .game-card-4 {
     position: relative;
@@ -334,29 +399,13 @@ article * {
 
 .game-card-4 h3{
     position: absolute;
-    left: 0;
-    top: 0;
+    left: var(--game-card-h3-left);
+    top: var(--game-card-h3-top);
     width: 100%;
     height: 100%;
     z-index: 2;
     opacity: 1;
 }
-
-.game-card-4 p{
-    position: absolute;
-    left: 0;
-    top: 30px;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    opacity: 1;
-}
-
-/* .game-card-4{
-    align-self: flex-end;   
-    background-image: url('../assets/spiderman_00.jpg');
-    background-size: cover;
-} */
 
 .game-card:hover{
     box-shadow: 4px 4px 4px 4px var(--dark-dark-color);
@@ -398,6 +447,10 @@ aside{
     margin: 10px;
 }
 
+.disqus-box{
+    max-width: 100%;
+    padding: 10px;
+}
 
 /* -------------------------------------------FOOTER CONF */
 
@@ -407,7 +460,7 @@ aside{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 iframe{

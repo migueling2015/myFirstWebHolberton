@@ -15,7 +15,7 @@
   <!-- END head -->
 
   <!-- INIT body -->
-  <body class="works_on_smartphone"> 
+  <body class="works_on_smartphone" > 
 
     <!-- INIT container header -->
     <header class="head">
@@ -26,8 +26,8 @@
         <ul>
           <li><a href="#">Crash Bandicoot</a></li>
           <li><a href="#">Hellblade</a></li>
-          <li><a href="#">Cuphead</a></li>
-          <li><a href="#">Spider-man</a></li>
+          <li><a href="cuphead.html">Cuphead</a></li>
+          <li><a href="spider_man.html">Spider-man</a></li>
           <!-- <li><a href="#">Contact</a></li> -->
         </ul>
       </div>
@@ -40,39 +40,49 @@
         <div class="group-games">
           <div class="game-card game-card-1">
               <h3>Crash Bandicoot</h3>
-              <p>lorem ipsum dolor sit amet, consectetur adipiscing</p>
+              <!-- <p>lorem ipsum dolor sit amet, consectetur adipiscing</p> -->
           </div>
           <div class="game-card game-card-2">
               <!-- <img src="assets/hellblade_00.jpg" alt=""> -->
               <h3>Hellblade</h3>
-              <p>lorem ipsum dolor sit amet, consectetur adipiscing</p>
+              <!-- <p>lorem ipsum dolor sit amet, consectetur adipiscing</p> -->
           </div>
         </div>
         <div class="group-games">
-          <div class="game-card game-card-3">
+          <div class="game-card game-card-3" style="cursor: pointer;" onclick="window.location='cuphead.html';">
               <h3>Cuphead</h3>
-              <p>lorem ipsum dolor sit amet, consectetur adipiscing</p>
+              <!-- <p>lorem ipsum dolor sit amet, consectetur adipiscing</p> -->
           </div>
-          <div class="game-card game-card-4">
+          <div class="game-card game-card-4" style="cursor: pointer;" onclick="window.location='spider_man.html';">
               <h3>Spider-man</h3>
-              <p>lorem ipsum dolor sit amet, consectetur adipiscing</p>
+              <!-- <p>lorem ipsum dolor sit amet, consectetur adipiscing</p> -->
           </div>
         </div>
       </article>
       <aside>
         <section class="aside-container">
-          <div class="tweets-tittle">
+          <!-- <div class="tweets-tittle">
             <h2>Social.</h2>
             <ul>
               <li><a href="#">Crash Bandicoot</a></li>
               <li><a href="#">Hellblade</a></li>
               <li><a href="#">Cuphead</a></li>
               <li><a href="#">Spider-man</a></li>
-              <!-- <li><a href="#">Contact</a></li> -->
             </ul>
-          </div>
-          <div class="tweets">
-              <a class="twitter-timeline" href="https://twitter.com/NinjaTheory?ref_src=twsrc%5Etfw">Tweets by NinjaTheory</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div> -->
+          <div class="tweets" id="tweets-panel">
+            <a class="twitter-timeline" href="https://twitter.com/StudioMDHR?ref_src=twsrc%5Etfw" data-tweet-limit="1">
+              Tweets by StudioMDHR</a>
+              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <a class="twitter-timeline" href="https://twitter.com/spiderman_game?ref_src=twsrc%5Etfw" data-tweet-limit="1">
+              Tweets by spiderman_game</a>
+              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <a class="twitter-timeline" href="https://twitter.com/NinjaTheory?ref_src=twsrc%5Etfw" data-tweet-limit="1">
+              Tweets by NinjaTheory</a>
+              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <a class="twitter-timeline" href="https://twitter.com/CrashBandicoot?ref_src=twsrc%5Etfw" data-tweet-limit="1">
+              Tweets by CrashBandicoot</a>
+              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           </div>
         </section>
       </aside>
@@ -90,7 +100,6 @@
   <!-- END body -->
 
   <!-- Scripts -->
-  <script src="scripts/lista_frases.js"></script>      
-  <script src="scripts/lista_misfavoritos.js"></script>
+  <script src="scripts/socialList.js"></script>
 
 </html> <!-- Cierra html -->
