@@ -37,6 +37,7 @@
     font-family: var(--font-pangolin);
     color: var(--dark-dark-color);
 }
+
 html{
     height: 100%;
 }
@@ -53,6 +54,15 @@ body{
 * a:hover{
     color: var(--white-color);
 }
+
+h2, p{
+    font-family: var(--font-pangolin);
+    color: var(--dark-dark-color);
+  }
+
+  #overlay-image img{
+    width: 100%;
+  }
 
 /* -------------------------------------------HEADER CONF */
 
@@ -202,6 +212,11 @@ article * {
     align-items: center;
     justify-content: center;
     align-items: center;
+}
+
+.char-img:hover{
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px 2px var(--brown-dark);
 }
 
 .char-img{
