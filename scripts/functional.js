@@ -18,7 +18,7 @@ var array_big_characters=[
 
 function on(char_index) { 
   document.getElementById("overlay").style.display = "block";
-  let image=document.getElementById("overlay-img");
+  let image=document.getElementById("overlay-image");
   image.innerHTML=array_big_characters[char_index];
 
 //   document.getElementById("overlay-img").style.top= window.screen.height;
