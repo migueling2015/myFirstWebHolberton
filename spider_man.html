@@ -13,9 +13,13 @@
     <title>miguel's choice</title>
   </head> 
   <!-- END head -->
-
+  
   <!-- INIT body -->
-  <body class="works_on_smartphone" onload="load_HTML()" > 
+  <body class="works_on_smartphone" onload="onload_event([2,'300px'])" > 
+
+    <div id="overlay">
+      <!-- Here is where javascript will insert HTML code -->
+    </div>
 
     <!-- INIT container header -->
     <header class="head">
@@ -23,8 +27,12 @@
         <ul><li class="logo"><a href="index.html"><h1>&#127292;&#127282;</h1></a></li></ul>
       </div>
       <div class="navigation">
-        <ul id="header-links-list">
-
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="crash_bandicoot.html">Crash Bandicoot</a></li>
+          <li><a href="hellblade.html">Hellblade</a></li>
+          <li><a href="cuphead.html">Cuphead</a></li>
+          <li><a href="#">Spider-man</a></li>
         </ul>
       </div>
     </header>
@@ -32,6 +40,7 @@
 
     <!-- INIT container "main" -->
     <section class="main">
+      <!-- INIT container "game-article" -->
       <article class="game-article">
           <div class="left"></div>
           <div class="center">
@@ -39,10 +48,10 @@
                 <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hello%20world" data-size="small">Tweet</a>
                 <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2F54.226.194.30%2F&layout=button&size=large&width=103&height=28&appId" width="103" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
                 <div class="game-title">
-                    <h2>Cuphead</h2>
+                    <h2>Crash Bandicoot</h2>
                 </div>
-                <div class="container-image-principal">
-                    <img src="assets/spiderman_00.jpg" alt="" width="100%">
+                <div class="container-image-principal image-cuphead">
+                    <img width="100%" src="assets/spiderman_00.jpg" alt="" >
                 </div>
                 <div class="game-description">
                     <p>
@@ -54,27 +63,50 @@
                       of spiderman games.
                     </p>
                 </div>
-                <h4>Can be played on:</h4>
                 <div class="consoles">
                     <div class="console"><img src="assets/ps4.svg" alt="" ></div>
                 </div>
                 <h3>Here's the playlist</h3>
                 <div class="game-spotify">
-                  <iframe src="https://open.spotify.com/embed/album/1yiWTurF4IMwwyRgtU1sly" width="100%" height="90" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                  <iframe src="https://open.spotify.com/embed/album/1Kx85IhG2J5vVOsNgDD8fw" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                 </div>
                 <h3>Some characters</h3>
                 <div class="characters-zone">
-
+                  <div class="char">
+                    <div class="char-img" onclick="on_2(0)">
+                      <img src="assets/char_spydi_spydi_00.jpg" alt="">
+                    </div>
+                    <div class="char-img" onclick="on_2(1)">
+                      <img src="assets/char_spydi_stan_lee.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="char">
+                    <div class="char-img" onclick="on_2(2)">
+                      <img src="assets/char_spydi_enemy_01.jpg" alt="" width="100%">  
+                    </div>
+                    <div class="char-img" onclick="on_2(3)">
+                      <img src="assets/char_spydi_enemy_02.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="char">
+                    <div class="char-img" onclick="on_2(4)">
+                      <img src="assets/char_spydi_enemy_03.jpg" alt="" width="100%">  
+                    </div>
+                    <div class="char-img" onclick="on_2(5)">
+                      <img src="assets/char_spydi_enemy_04.jpg" alt="">
+                    </div>
+                  </div>
                 </div>
                 <h3>Take a look into the trailer</h3>
                 <div class="game-youtube">
-                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/3R2uvJqWeVg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="100%" height="400" src="https://www.youtube.com/embed/3R2uvJqWeVg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
           </div>
           <div class="right"></div>
       </article>
-
+      <!-- END container "game-article" -->
+      <!-- INIT aside panel -->
       <aside>
         <div class="disqus-box" id="disqus_thread"></div>
         <script>
@@ -97,6 +129,7 @@
         </script>
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
       </aside>
+      <!-- END aside panel -->
     </section>
     <!-- END container "main" -->
 
@@ -104,11 +137,12 @@
     <footer class="foot">
         <div class="greatings">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
     </footer>
-    <!-- INIT container footer -->
+    <!-- END container footer -->
     
     <!-- Scripts -->
-    <script src="scripts/pre.js"></script>
-    <script id="dsq-count-scr" src="//http-54-226-194-30.disqus.com/count.js" async></script>
+    <script src="scripts/behavior.js"></script>
+
   </body> 
   <!-- END body -->
-</html> <!-- Cierra html -->
+</html> 
+<!-- END html -->

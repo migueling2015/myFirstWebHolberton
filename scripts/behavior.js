@@ -24,7 +24,14 @@ var ARRAY_CRASH_ASSETS=[
   ['<img src="assets/char_uka_uka_big.jpg" alt="Crash Bandicoot" >','Uka Ukka',"Is the overarching antagonist in the Crash Bandicoot series and is a voodoo mask spirit who is the younger twin brother of Aku Aku, of whom he is the exact opposite. He is ultimately the driving force behind a massive evil plan, which he often uses to work with Doctor Neo Cortex and is frequently upset with Cortex for his failures. Uka Uka has a short temper and, as a result, is very impatient and he blames Cortex every time he fails."],
 ];
 
-var ARRAY_SPIDY_ASSETS=[];
+var ARRAY_SPIDY_ASSETS=[
+  ['<img src="assets/char_spydi_spydi_00_big.jpg" alt="Spider-man" >',,],
+  ['<img src="assets/char_spydi_stan_lee.jpg" alt="Stan" >',,],
+  ['<img src="assets/char_spydi_enemy_01.jpg" alt="Enemy" >',,],
+  ['<img src="assets/char_spydi_enemy_02.jpg" alt="Enemy" >',,],
+  ['<img src="assets/char_spydi_enemy_03.jpg" alt="Enemy" >',,],
+  ['<img src="assets/char_spydi_enemy_04.jpg" alt="Enemy" >',,],
+];
 
 var ARRAY_HELL_ASSETS=[
   ['<img id="img-over" src="assets/char_hellblade_00.jpg" alt="Senua" >',,],
@@ -37,6 +44,8 @@ var ARRAY_HELL_ASSETS=[
 ];
 
 var ARRAY_BIG_CHARACTERS=[];
+
+var RENDER_TYPE='';
 
 function onload_event(event_data){
   // insert_list='<li><a href="crash_bandicoot.html">Crash Bandicoot</a></li><li><a href="#">Hellblade</a></li><li><a href="cuphead.html">Cuphead</a></li><li><a href="#">Spider-man</a></li>'
@@ -60,6 +69,8 @@ function onload_event(event_data){
   console.log(`arreglo asignado: ${event_data[0]}`)
   console.log(`ARREGLO: ${ARRAY_BIG_CHARACTERS}`)
 
+  RENDER_TYPE=event_data[2]
+
   let x = document.getElementsByClassName("char-img");
 
   if(event_data[1]!=''){
@@ -70,31 +81,31 @@ function onload_event(event_data){
   }
 }
 
-function on(char_index) { 
+function on_1(char_index) { 
+
+  console.log(`Se inició mostrar página superpuesta, tipo ${RENDER_TYPE}`)
 
   string_HTML=''
  
   string_HTML+='<div class="overlay-spacer-vertical" onclick="off()"></div>'
-  if (char_index[2]=='A') {
+  
   string_HTML+='<div id="overlay-content" class="overlay-content">'
   string_HTML+='<div id="overlay-container">'
-  }
   string_HTML+='<div id="overlay-image">'
   string_HTML+=ARRAY_BIG_CHARACTERS[char_index][0]
   string_HTML+='</div>'
-  if (char_index[2]=='A') {
-    string_HTML+='<div id="overlay-text">'
-    string_HTML+='<div class="char-info-name">'
-    string_HTML+='<h2>'+ ARRAY_BIG_CHARACTERS[char_index][1] +'</h2>'
-    string_HTML+='</div>'
-    string_HTML+='<div class="char-info-description">'
-    string_HTML+='<p>'+ ARRAY_BIG_CHARACTERS[char_index][2] +'</p>'
-    string_HTML+='</div>'
-    string_HTML+='</div>'
-    string_HTML+='</div>'
-    string_HTML+='</div>'
-  }  
-
+  console.log(`se cumple If1: ${ARRAY_BIG_CHARACTERS}`)
+  string_HTML+='<div id="overlay-text">'
+  string_HTML+='<div class="char-info-name">'
+  string_HTML+='<h2>'+ ARRAY_BIG_CHARACTERS[char_index][1] +'</h2>'
+  string_HTML+='</div>'
+  string_HTML+='<div class="char-info-description">'
+  string_HTML+='<p>'+ ARRAY_BIG_CHARACTERS[char_index][2] +'</p>'
+  string_HTML+='</div>'
+  string_HTML+='</div>'
+  string_HTML+='</div>'
+  string_HTML+='</div>'
+  
   string_HTML+='<div class="overlay-spacer-vertical" onclick="off()"><a id="close_viewer" style="font-size: 40px; color: black; padding: 10px;">[X]</a></div>'
  
   console.log(`string insert like a HTNL: ${string_HTML}`)
@@ -124,23 +135,64 @@ function on(char_index) {
     x[i].style.flex="1";
   }
 
-  if (char_index[2]=='A') {
-    let div_overlay_content=document.getElementById("overlay-content")
+  let div_overlay_content=document.getElementById("overlay-content")
 
-    div_overlay_content.style.height="auto";
-    div_overlay_content.style.flex="3";
-    div_overlay_content.style.justifyContent="center";
+  div_overlay_content.style.height="auto";
+  div_overlay_content.style.flex="3";
+  div_overlay_content.style.justifyContent="center";
 
-    let div_overlay_container=document.getElementById("overlay-container")
+  let div_overlay_container=document.getElementById("overlay-container")
 
-    div_overlay_container.style.cursor="default";
-    div_overlay_container.style.height="auto";
-    div_overlay_container.style.backgroundColor="#f2e3bc";
-    div_overlay_container.style.justifyContent="center";
-    div_overlay_container.style.borderRadius="3px";
-    div_overlay_container.style.boxShadow="1px 1px 1px 1px #c19875"
-    div_overlay_container.style.marginTop="70px"
-    div_overlay_container.style.padding="30px"
+  div_overlay_container.style.cursor="default";
+  div_overlay_container.style.height="auto";
+  div_overlay_container.style.backgroundColor="#f2e3bc";
+  div_overlay_container.style.justifyContent="center";
+  div_overlay_container.style.borderRadius="3px";
+  div_overlay_container.style.boxShadow="1px 1px 1px 1px #c19875"
+  div_overlay_container.style.marginTop="70px"
+  div_overlay_container.style.padding="30px"
+
+}
+
+function on_2(char_index) { 
+
+  console.log(`Se inició mostrar página superpuesta, tipo ${RENDER_TYPE}`)
+
+  string_HTML=''
+ 
+  string_HTML+='<div class="overlay-spacer-vertical" onclick="off()"></div>'
+  
+  string_HTML+='<div id="overlay-image">'
+  string_HTML+=ARRAY_BIG_CHARACTERS[char_index][0]
+  string_HTML+='</div>'
+  
+  string_HTML+='<div class="overlay-spacer-vertical" onclick="off()"><a id="close_viewer" style="font-size: 40px; color: black; padding: 10px;">[X]</a></div>'
+ 
+  console.log(`string insert like a HTNL: ${string_HTML}`)
+
+  let div_overlay=document.getElementById("overlay")
+
+  div_overlay.innerHTML=string_HTML
+
+  div_overlay.style.display="flex";
+  div_overlay.style.flex="row";
+  div_overlay.style.justifyContent="center";
+  div_overlay.style.position="fixed";
+  div_overlay.style.width="100%";
+  div_overlay.style.height="100%";
+  div_overlay.style.top="0";
+  div_overlay.style.left="0";
+  div_overlay.style.right="0";
+  div_overlay.style.bottom="0";
+  div_overlay.style.backgroundColor="rgba(0,0,0,0.65)";
+  div_overlay.style.zIndex ="2";
+  div_overlay.style.cursor="pointer";
+
+  let x = document.getElementsByClassName("overlay-spacer-vertical");
+
+  let i;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.flex="1";
   }
 }
 
