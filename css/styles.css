@@ -307,7 +307,7 @@ article * {
     height: 100%;
     z-index: 1;
     opacity: var(--opacity-back-image);
-    background-image: url('../assets/cbandicoot_00.jpg');
+    background-image: url('https://i.ibb.co/d0SYLjx/cbandicoot-00.jpg');
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: cover;
@@ -339,7 +339,7 @@ article * {
     height: 100%;
     z-index: 1;
     opacity: var(--opacity-back-image);
-    background-image: url('../assets/hellblade_00.jpg');
+    background-image: url('https://i.ibb.co/y8BTLrr/hellblade-00.jpg');
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: cover;
@@ -371,7 +371,7 @@ article * {
     height: 100%;
     z-index: 1;
     opacity: var(--opacity-back-image);
-    background-image: url('../assets/cuphead_00.jpg');
+    background-image: url("https://i.ibb.co/ZK8W1L7/cuphead-00.jpg");
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: cover;
@@ -403,7 +403,7 @@ article * {
     height: 100%;
     z-index: 1;
     opacity: var(--opacity-back-image);
-    background-image: url('../assets/spiderman_00.jpg');
+    background-image: url("https://i.ibb.co/jJ0rcP9/spiderman-00.jpg");
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: cover;
