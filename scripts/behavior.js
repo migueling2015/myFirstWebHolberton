@@ -26,7 +26,15 @@ var ARRAY_CRASH_ASSETS=[
 
 var ARRAY_SPIDY_ASSETS=[];
 
-var ARRAY_HELL_ASSETS=[];
+var ARRAY_HELL_ASSETS=[
+  ['<img id="img-over" src="assets/char_hellblade_00.jpg" alt="Senua" >',,],
+  ['<img id="img-over" src="assets/char_hellblade_enemy_00.jpg" alt="Enemy" >',,],
+  ['<img id="img-over" src="assets/char_hellblade_enemy_01.jpg" alt="Enemy" >',,],
+  ['<img id="img-over" src="assets/char_hellblade_enemy_06.jpg" alt="Enemy" >',,],
+  ['<img id="img-over" src="assets/char_hellblade_enemy_02.jpg" alt="Enemy" >',,],
+  ['<img id="img-over" src="assets/char_hellblade_enemy_04.jpg" alt="Enemy" >',,],
+  ['<img id="img-over" src="assets/char_hellblade_enemy_05.jpg" alt="Enemy" >',,],
+];
 
 var ARRAY_BIG_CHARACTERS=[];
 
@@ -67,21 +75,26 @@ function on(char_index) {
   string_HTML=''
  
   string_HTML+='<div class="overlay-spacer-vertical" onclick="off()"></div>'
+  if (char_index[2]=='A') {
   string_HTML+='<div id="overlay-content" class="overlay-content">'
   string_HTML+='<div id="overlay-container">'
+  }
   string_HTML+='<div id="overlay-image">'
   string_HTML+=ARRAY_BIG_CHARACTERS[char_index][0]
   string_HTML+='</div>'
-  string_HTML+='<div id="overlay-text">'
-  string_HTML+='<div class="char-info-name">'
-  string_HTML+='<h2>'+ ARRAY_BIG_CHARACTERS[char_index][1] +'</h2>'
-  string_HTML+='</div>'
-  string_HTML+='<div class="char-info-description">'
-  string_HTML+='<p>'+ ARRAY_BIG_CHARACTERS[char_index][2] +'</p>'
-  string_HTML+='</div>'
-  string_HTML+='</div>'
-  string_HTML+='</div>'
-  string_HTML+='</div>'
+  if (char_index[2]=='A') {
+    string_HTML+='<div id="overlay-text">'
+    string_HTML+='<div class="char-info-name">'
+    string_HTML+='<h2>'+ ARRAY_BIG_CHARACTERS[char_index][1] +'</h2>'
+    string_HTML+='</div>'
+    string_HTML+='<div class="char-info-description">'
+    string_HTML+='<p>'+ ARRAY_BIG_CHARACTERS[char_index][2] +'</p>'
+    string_HTML+='</div>'
+    string_HTML+='</div>'
+    string_HTML+='</div>'
+    string_HTML+='</div>'
+  }  
+
   string_HTML+='<div class="overlay-spacer-vertical" onclick="off()"><a id="close_viewer" style="font-size: 40px; color: black; padding: 10px;">[X]</a></div>'
  
   console.log(`string insert like a HTNL: ${string_HTML}`)
@@ -100,7 +113,7 @@ function on(char_index) {
   div_overlay.style.left="0";
   div_overlay.style.right="0";
   div_overlay.style.bottom="0";
-  div_overlay.style.backgroundColor="rgba(0,0,0,0.7)";
+  div_overlay.style.backgroundColor="rgba(0,0,0,0.65)";
   div_overlay.style.zIndex ="2";
   div_overlay.style.cursor="pointer";
 
@@ -111,22 +124,24 @@ function on(char_index) {
     x[i].style.flex="1";
   }
 
-  let div_overlay_content=document.getElementById("overlay-content")
+  if (char_index[2]=='A') {
+    let div_overlay_content=document.getElementById("overlay-content")
 
-  div_overlay_content.style.height="auto";
-  div_overlay_content.style.flex="3";
-  div_overlay_content.style.justifyContent="center";
+    div_overlay_content.style.height="auto";
+    div_overlay_content.style.flex="3";
+    div_overlay_content.style.justifyContent="center";
 
-  let div_overlay_container=document.getElementById("overlay-container")
+    let div_overlay_container=document.getElementById("overlay-container")
 
-  div_overlay_container.style.cursor="default";
-  div_overlay_container.style.height="auto";
-  div_overlay_container.style.backgroundColor="#f2e3bc";
-  div_overlay_container.style.justifyContent="center";
-  div_overlay_container.style.borderRadius="3px";
-  div_overlay_container.style.boxShadow="1px 1px 1px 1px #c19875"
-  div_overlay_container.style.marginTop="70px"
-  div_overlay_container.style.padding="30px"
+    div_overlay_container.style.cursor="default";
+    div_overlay_container.style.height="auto";
+    div_overlay_container.style.backgroundColor="#f2e3bc";
+    div_overlay_container.style.justifyContent="center";
+    div_overlay_container.style.borderRadius="3px";
+    div_overlay_container.style.boxShadow="1px 1px 1px 1px #c19875"
+    div_overlay_container.style.marginTop="70px"
+    div_overlay_container.style.padding="30px"
+  }
 }
 
 function off() {
