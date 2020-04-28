@@ -9,15 +9,17 @@
     <!-- CSS -->
     <link href="https://www.holbertonschool.com/level2/holberton.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/styles_2.css">
 
     <title>miguel's choice</title>
   </head> 
   <!-- END head -->
   
   <!-- INIT body -->
-  <body class="works_on_smartphone" onload="off()" > 
-    <div id="overlay" onclick="off()"><div id="overlay-img"></div></div>
+  <body class="works_on_smartphone" onload="onload_event([0])" > 
+
+    <div id="overlay">
+      <!-- Here is where javascript will insert HTML code -->
+    </div>
 
     <!-- INIT container header -->
     <header class="head">
@@ -68,47 +70,47 @@
                 <h3>Some characters</h3>
                 <div class="characters-zone">
                   <div class="char">
-                    <div class="char-img">
+                    <div class="char-img" onclick="on(0)">
                       <img src="assets/char_cuphead.jpg" alt="">
                     </div>
-                    <div class="char-img">
+                    <div class="char-img" onclick="on(1)">
                       <img src="assets/char_mughead.jpg" alt="">
                     </div>
                   </div>
                   <div class="char">
-                    <div class="char-img">
+                    <div class="char-img" onclick="on(2)">
                       <img src="assets/char_baroness_von_bon_bon.jpg" alt="">
                     </div>
-                    <div class="char-img">
+                    <div class="char-img" onclick="on(3)">
                       <img src="assets/char_beppi_the_clown.jpg" alt="">
                     </div>
-                    <div class="char-img">
+                    <div class="char-img" onclick="on(4)">
                       <img src="assets/char_cagney_carnation.jpg" alt="">
                     </div>
                   </div>
                   <div class="char">
-                    <div class="char-img">
+                    <div class="char-img" onclick="on(5)">
                       <img src="assets/char_cala_maria.jpg" alt="">
                     </div>
-                    <div class="char-img">
+                    <div class="char-img" onclick="on(6)">
                       <img src="assets/char_captain_brineybeard.jpg" alt="">
                     </div>
-                    <div class="char-img">
+                    <div class="char-img" onclick="on(7)">
                       <img src="assets/char_dijimi_the_great.jpg" alt="">
                     </div>
                   </div>
                   <div class="char">
-                    <div class="char-img">
+                    <div class="char-img" onclick="on(8)">
                       <img src="assets/char_dr_kahls_robot.jpg" alt="">
                     </div>
-                    <div class="char-img">
+                    <div class="char-img"  onclick="on(9)">
                       <img src="assets/char_hilda_berg.jpg" alt="">
                     </div>
-                    <div class="char-img">
+                    <div class="char-img" onclick="on(10)">
                       <img src="assets/char_ribby_and_criaks.jpg" alt="">
                     </div>
                   </div>
-                  <div class="char">
+                  <div class="char" >
                     <div class="char-img" onclick="on(11)">
                       <img src="assets/char_le_grande.jpg" alt="" >
                     </div>
@@ -120,10 +122,14 @@
                     </div>
                   </div>
                   <div class="char">
-                    <div class="char-img">
+                    <div class="char-img" onclick="on(14)">
                       <img src="assets/char_the_devil.jpg" alt="" width="100%">  
                     </div>
                   </div>
+                </div>
+                <div>
+                  <br>
+                  <p>The character´s information was taken from <a href="https://www.digitaltrends.com/gaming/cuphead-review/">digitaltrends.com</a> and <a href="https://cuphead.fandom.com/wiki/Cuphead_Wiki">Cuphead's wiki</a></p>
                 </div>
                 <h3>Take a look into the trailer</h3>
                 <div class="game-youtube">
@@ -168,7 +174,7 @@
     <!-- Scripts -->
     <script src="scripts/pre.js"></script>
     <script src="scripts/functional.js"></script>
-    <script id="dsq-count-scr" src="//http-54-226-194-30.disqus.com/count.js" async></script>
+    <!-- <script id="dsq-count-scr" src="//http-54-226-194-30.disqus.com/count.js" async></script> -->
   </body> 
   <!-- END body -->
 </html> <!-- Cierra html -->

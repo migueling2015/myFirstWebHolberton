@@ -14,6 +14,9 @@ function loadTwits(valor) {
 
     console.log(`Se ha seleccionado ${arreglo[valor][0]}`)
     document.getElementById("tweets-panel").innerHTML = arreglo[valor][1];
+
+
+    
     // console.log(selecicon)
     // console.log(lista_de_juegos_favoritos[selecicon])
 }
