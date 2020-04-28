@@ -54,11 +54,12 @@ function onload_event(event_data){
 
   let x = document.getElementsByClassName("char-img");
 
-  let i;
-  for (i = 0; i < x.length; i++) {
-    x[i].style.height=event_data[1];
+  if(event_data[1]!=''){
+    let i;
+    for (i = 0; i < x.length; i++) {
+      x[i].style.height=event_data[1];
+    }
   }
-
 }
 
 function on(char_index) { 
@@ -81,7 +82,7 @@ function on(char_index) {
   string_HTML+='</div>'
   string_HTML+='</div>'
   string_HTML+='</div>'
-  string_HTML+='<div class="overlay-spacer-vertical" onclick="off()"></div>'
+  string_HTML+='<div class="overlay-spacer-vertical" onclick="off()"><a id="close_viewer" style="font-size: 40px; color: black; padding: 10px;">[X]</a></div>'
  
   console.log(`string insert like a HTNL: ${string_HTML}`)
 
@@ -99,7 +100,7 @@ function on(char_index) {
   div_overlay.style.left="0";
   div_overlay.style.right="0";
   div_overlay.style.bottom="0";
-  div_overlay.style.backgroundColor="rgba(0,0,0,0.8)";
+  div_overlay.style.backgroundColor="rgba(0,0,0,0.7)";
   div_overlay.style.zIndex ="2";
   div_overlay.style.cursor="pointer";
 

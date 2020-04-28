@@ -15,7 +15,7 @@
   <!-- END head -->
   
   <!-- INIT body -->
-  <body class="works_on_smartphone" onload="onload_event([0,'300px'])" > 
+  <body class="works_on_smartphone" onload="onload_event([0,'','A'])" > 
 
     <div id="overlay">
       <!-- Here is where javascript will insert HTML code -->
@@ -30,10 +30,9 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="crash_bandicoot.html">Crash Bandicoot</a></li>
-          <li><a href="#">Hell's blade</a></li>
+          <li><a href="hellblade.html">Hellblade</a></li>
           <li><a href="#">Cuphead</a></li>
           <li><a href="spider_man.html">Spider-man</a></li>
-          <!-- <li><a href="#">Contact</a></li> -->
         </ul>
       </div>
     </header>
@@ -41,6 +40,7 @@
 
     <!-- INIT container "main" -->
     <section class="main">
+      <!-- INIT container "game-article" -->
       <article class="game-article">
           <div class="left"></div>
           <div class="center">
@@ -144,7 +144,8 @@
           </div>
           <div class="right"></div>
       </article>
-
+      <!-- END container "game-article" -->
+      <!-- INIT aside panel -->
       <aside>
         <div class="disqus-box" id="disqus_thread"></div>
         <script>
@@ -167,6 +168,7 @@
         </script>
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
       </aside>
+      <!-- END aside panel -->
     </section>
     <!-- END container "main" -->
 
@@ -174,12 +176,12 @@
     <footer class="foot">
         <div class="greatings">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
     </footer>
-    <!-- INIT container footer -->
+    <!-- END container footer -->
     
     <!-- Scripts -->
-    <script src="scripts/pre.js"></script>
-    <script src="scripts/functional.js"></script>
-    <!-- <script id="dsq-count-scr" src="//http-54-226-194-30.disqus.com/count.js" async></script> -->
+    <script src="scripts/behavior.js"></script>
+
   </body> 
   <!-- END body -->
-</html> <!-- Cierra html -->
+</html> 
+<!-- END html -->
