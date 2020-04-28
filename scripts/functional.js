@@ -17,7 +17,12 @@ var ARRAY_CUPHEAD_ASSETS=[
     ['<img src="assets/the_devil_gif.gif" alt="The devil" >','The Devil','Cuphead‘s final boss is certainly challenging, but it’s not the hardest fight in the game. The first phase is all about recognizing patterns and getting a bit lucky with the randomized sequence of attacks. Some projectiles are easier to dodge than others.'],
 ];
 
-var ARRAY_CRASH_ASSETS=[];
+var ARRAY_CRASH_ASSETS=[
+  ['<img src="assets/char_crash_bandicoot_big.jpg" alt="Crash Bandicoot" >','Crash Bandicoot',"Is the main titular protagonist of the Crash Bandicoot series. Originally planned to be named Willie the Wombat, he is an Eastern Barred Bandicoot living on N. Sanity Island, who was captured and evolved by Doctor Neo Cortex. Throughout the series, Cortex is Crash's usual arch-enemy and is always defeated by Crash in order to keep peace around the island. Crash is often accompanied by his ally, Aku Aku, the series' deuteragonist. In the earlier games, he tended to say Whoa! whenever he got killed. In the later games, he spoke gibberish with a very basic knowledge of the language spoken in the game."],
+  ['<img src="assets/char_aku_aku_big.jpg" alt="Crash Bandicoot" >','Aku Aku',"Is the deuteragonist of the Crash Bandicoot series. He is a witch doctor spirit who now lives as a wooden mask who guides Crash, his sister Coco and their friends as they defeat the forces of evil. He has made appearances in every Crash Bandicoot game, although one of them is just a cameo. In the platforming Crash games, from the original up until Crash of the Titans, if 3 masks are found, Crash becomes invincible for a limited amount of time, with Aku Aku being placed on Crash's face during this period. He is the deuteragonist of the series, as well as a father figure to Crash, Coco and their friends."],
+  ['<img src="assets/char_n_cortex_big.jpg" alt="Crash Bandicoot" >','Dr. Neo Cortex',"Is a professional evil scientist born in Peoria, Illinois and the main antagonist of the Crash Bandicoot series. He is known as the creator of his nemesis: Crash Bandicoot. In almost all games, Cortex is usually the final boss, the exceptions being Crash Bandicoot 2: N-Tranced, Tag Team Racing (where he is a playable character), Crash Twinsanity (where he is the first boss and a playable character in some levels), and Crash of the Titans (where he is also the first boss)."],
+  ['<img src="assets/char_uka_uka_big.jpg" alt="Crash Bandicoot" >','Uka Ukka',"Is the overarching antagonist in the Crash Bandicoot series and is a voodoo mask spirit who is the younger twin brother of Aku Aku, of whom he is the exact opposite. He is ultimately the driving force behind a massive evil plan, which he often uses to work with Doctor Neo Cortex and is frequently upset with Cortex for his failures. Uka Uka has a short temper and, as a result, is very impatient and he blames Cortex every time he fails."],
+];
 
 var ARRAY_SPIDY_ASSETS=[];
 
@@ -26,6 +31,10 @@ var ARRAY_HELL_ASSETS=[];
 var ARRAY_BIG_CHARACTERS=[];
 
 function onload_event(event_data){
+  // insert_list='<li><a href="crash_bandicoot.html">Crash Bandicoot</a></li><li><a href="#">Hellblade</a></li><li><a href="cuphead.html">Cuphead</a></li><li><a href="#">Spider-man</a></li>'
+  // document.getElementById("header-links-list").innerHTML = insert_list;
+  // console.log(`Nav List, loaded!`)
+
   assets_array_selector=event_data[0];
   if (assets_array_selector==0) {
     ARRAY_BIG_CHARACTERS=ARRAY_CUPHEAD_ASSETS;
@@ -42,6 +51,14 @@ function onload_event(event_data){
 
   console.log(`arreglo asignado: ${event_data[0]}`)
   console.log(`ARREGLO: ${ARRAY_BIG_CHARACTERS}`)
+
+  let x = document.getElementsByClassName("char-img");
+
+  let i;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.height=event_data[1];
+  }
+
 }
 
 function on(char_index) { 
@@ -86,9 +103,9 @@ function on(char_index) {
   div_overlay.style.zIndex ="2";
   div_overlay.style.cursor="pointer";
 
-  var x = document.getElementsByClassName("overlay-spacer-vertical");
+  let x = document.getElementsByClassName("overlay-spacer-vertical");
 
-  var i;
+  let i;
   for (i = 0; i < x.length; i++) {
     x[i].style.flex="1";
   }
